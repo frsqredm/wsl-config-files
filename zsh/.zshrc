@@ -21,7 +21,7 @@ autoload -Uz compinit && compinit
 zinit cdreplay -q
 
 # Add OMP
-eval "$(oh-my-posh init zsh --config ~/.config.omp.toml)"
+eval "$(oh-my-posh init zsh --config ~/.config/omp/.conf.omp.toml)"
 
 # Add in snippets
 zinit snippet OMZP::git
