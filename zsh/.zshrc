@@ -16,10 +16,6 @@ zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 zinit light Aloxaf/fzf-tab
 
-# Load completions
-autoload -Uz compinit && compinit
-zinit cdreplay -q
-
 # Add OMP
 eval "$(oh-my-posh init zsh --config ~/.config/omp/.conf.omp.toml)"
 
@@ -30,6 +26,11 @@ zinit snippet OMZP::archlinux
 zinit snippet OMZP::command-not-found
 zinit snippet OMZP::gem
 zinit snippet OMZP::rails
+zinit snippet OMZP::asdf
+
+# Load completions
+autoload -Uz compinit && compinit
+zinit cdreplay -q
 
 # Keybindings
 bindkey '^p' history-search-backward
