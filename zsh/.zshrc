@@ -74,3 +74,13 @@ eval "$(zoxide init --cmd cd zsh)"
 
 # Change default cursor
 echo '\e[5 q'
+
+# Created by `pipx` on 2024-07-12 01:57:20
+export PATH="$PATH:/home/rover/.local/bin"
+
+# bun completions
+[ -s "/home/rover/.bun/_bun" ] && source "/home/rover/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
