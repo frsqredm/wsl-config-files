@@ -67,6 +67,7 @@ alias nivm='nvim'
 alias nv='nvim'
 alias vim='nvim'
 alias c='clear'
+alias neofetch='neofetch --source ~/.config/neofetch/arch_ascii'
 
 # Shell integrations
 eval "$(fzf --zsh)"
