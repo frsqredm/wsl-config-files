@@ -1,7 +1,6 @@
 return {
-  --enable
-  { "j-hui/fidget.nvim", tag = "v1.4.5", opts = {} },
-  --disable
+  { "nvimdev/dashboard-nvim", enabled = false },
   { "folke/noice.nvim", enabled = false },
   { "rcarriga/nvim-notify", enabled = false },
+  { "folke/todo-comments.nvim", enabled = false },
 }
