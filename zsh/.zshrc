@@ -77,18 +77,18 @@ eval "$(zoxide init --cmd cd zsh)"
 echo '\e[5 q'
 
 # Created by `pipx` on 2024-07-12 01:57:20
-export PATH="$PATH:/home/rover/.local/bin"
+export PATH="$PATH:${HOME}/.local/bin"
 
 # bun completions
-[ -s "/home/rover/.bun/_bun" ] && source "/home/rover/.bun/_bun"
+[ -s "${HOME}/.bun/_bun" ] && source "${HOME}/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 # fnm
-FNM_PATH="/home/rover/.local/share/fnm"
+FNM_PATH="${HOME}/.local/share/fnm"
 if [ -d "$FNM_PATH" ]; then
-  export PATH="/home/rover/.local/share/fnm:$PATH"
+  export PATH="${HOME}/.local/share/fnm:$PATH"
   eval "`fnm env`"
 fi
