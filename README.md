@@ -1,1 +1,1 @@
-# Configuration file for linux apps and packages
+# Configuration file for Arch linux apps and packages in WSL
