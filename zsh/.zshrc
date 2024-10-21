@@ -1,4 +1,4 @@
-# Set the directory we want to store zinit and plugins
+# Set the directory to store zinit and plugins
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
 # Download Zinit, if it's not there yet
@@ -76,7 +76,6 @@ eval "$(zoxide init --cmd cd zsh)"
 # Change default cursor
 echo '\e[5 q'
 
-# Created by `pipx` on 2024-07-12 01:57:20
 export PATH="$PATH:${HOME}/.local/bin"
 
 # bun completions
