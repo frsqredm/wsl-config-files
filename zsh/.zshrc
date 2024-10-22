@@ -1,3 +1,19 @@
+export PATH="$PATH:${HOME}/.local/bin"
+
+# bun completions
+[ -s "${HOME}/.bun/_bun" ] && source "${HOME}/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# fnm
+FNM_PATH="${HOME}/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="${HOME}/.local/share/fnm:$PATH"
+  eval "`fnm env`"
+fi
+
 # Set the directory to store zinit and plugins
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
@@ -75,19 +91,3 @@ eval "$(zoxide init --cmd cd zsh)"
 
 # Change default cursor
 echo '\e[5 q'
-
-export PATH="$PATH:${HOME}/.local/bin"
-
-# bun completions
-[ -s "${HOME}/.bun/_bun" ] && source "${HOME}/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-
-# fnm
-FNM_PATH="${HOME}/.local/share/fnm"
-if [ -d "$FNM_PATH" ]; then
-  export PATH="${HOME}/.local/share/fnm:$PATH"
-  eval "`fnm env`"
-fi
