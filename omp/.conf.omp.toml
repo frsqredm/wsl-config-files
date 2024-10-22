@@ -1,8 +1,34 @@
 #:schema https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json
 
 version = 2
-final_space = true
+disable_notice = true
 console_title_template = "{{ .Shell }} in {{ .Folder }}"
+
+[[blocks]]
+  type = "prompt"
+  alignment = "left"
+  newline = true
+
+  [[blocks.segments]]
+    type = "session"
+    style = "plain"
+    #foreground_templates = [
+      #"{{if gt .Code 0}}red{{end}}",
+      #"{{if eq .Code 0}}green{{end}}",
+      #]
+    foreground = "green"
+    background = "transparent"
+    template = "{{.UserName}}{{if .SSHSession}} \ueba9 {{else}} @ {{end}}{{.HostName}}"
+
+  [[blocks.segments]]
+    type = "executiontime"
+    style = "plain"
+    foreground = "cyan"
+    background = "transparent"
+    template = " {{ .FormattedMs }}"
+
+    [blocks.segments.properties]
+      threshold = 5000
 
 [[blocks]]
   type = "prompt"
@@ -22,7 +48,7 @@ console_title_template = "{{ .Shell }} in {{ .Folder }}"
   [[blocks.segments]]
     type = "git"
     style = "plain"
-    foreground = "cyan"
+    foreground = "blue"
     background = "transparent"
     template = " {{.HEAD}}{{ if or (.Working.Changed) (.Staging.Changed) }}-*{{ end }}<cyan>{{ if gt .Behind 0 }}-\uf175{{ end }}{{ if gt .Ahead 0 }}-\uf176{{ end }}</>"
 
@@ -31,17 +57,7 @@ console_title_template = "{{ .Shell }} in {{ .Folder }}"
       commit_icon = "@"
       fetch_status = true
 
-  [[blocks.segments]]
-    type = "executiontime"
-    style = "plain"
-    foreground = "yellow"
-    background = "transparent"
-    template = " {{ .FormattedMs }}"
-
-    [blocks.segments.properties]
-      threshold = 5000
-
-[[blocks]]
+ [[blocks]]
   type = "prompt"
   alignment = "left"
   newline = true
@@ -51,20 +67,20 @@ console_title_template = "{{ .Shell }} in {{ .Folder }}"
     style = "plain"
     foreground_templates = [
       "{{if gt .Code 0}}red{{end}}",
-      "{{if eq .Code 0}}green{{end}}",
+      "{{if eq .Code 0}}green{{end}}"
     ]
     background = "transparent"
-    template = "{{.UserName}} \uf054"
+    template = "\uf054 "
 
 [transient_prompt]
   foreground_templates = [
     "{{if gt .Code 0}}red{{end}}",
-    "{{if eq .Code 0}}green{{end}}",
+    "{{if eq .Code 0}}green{{end}}"
   ]
   background = "transparent"
   template = "\uf054 "
 
 [secondary_prompt]
-  foreground = "magenta"
+  foreground = "green"
   background = "transparent"
   template = "\uf054\uf054 "
