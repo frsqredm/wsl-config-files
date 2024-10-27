@@ -12,7 +12,7 @@ sleep 2
 # Install packages
 echo "Installing packages ..."
 sudo pacman -Syu --noconfirm
-sudo pacman -S --noconfirm base-devel zsh pacman-contrib man-db alacritty git neovim fzf zoxide tree unzip postgresql postgresql-libs wget libffi libyaml openssl zlib
+sudo pacman -S --noconfirm base-devel zsh pacman-contrib man-db git neovim fzf zoxide tree unzip postgresql postgresql-libs wget libffi openssl zlib
 echo -e "\n--> done\n"
 sleep 2
 
