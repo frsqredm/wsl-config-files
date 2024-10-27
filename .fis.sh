@@ -1,6 +1,6 @@
 #!/bin/bash
 
-fis_version="0.8.0"
+fis_version="0.8.5"
 
 # Modify pacman ParallelDownloads
 sudo sed -i "s/ParallelDownloads.*/ParallelDownloads = 10\nILoveCandy/" /etc/pacman.conf
@@ -27,6 +27,7 @@ echo "Configuring git as frsqredm"
 git config --global user.name frsqredm
 git config --global user.email fr.sqre.dm@gmail.com
 git config --global credential.helper "cache --timeout=604800"
+git config --global init.defaultBranch main
 echo -e "\n--> done\n"
 sleep 2
 
